@@ -1,12 +1,9 @@
 //Link API
 import Link from 'next/Link';
 import Header from '../components/Header';
+import Layout from '../components/MyLayout';
+import withLayout from '../components/MyLayout'
 
-export default function Index() {
-    return (
-        <div>
-            <Header />
-            <p>Hello Next.js</p>
-        </div>
-    );
-}
+const Page = () => <p>Hello Next.js</p>
+
+export default withLayout(Page);
